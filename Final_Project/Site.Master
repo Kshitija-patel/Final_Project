@@ -1,0 +1,35 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site.master.cs" Inherits="Final_Project.SiteMaster" %>
+
+<<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title>Final Project</title>
+    <link rel="stylesheet" type="text/css" href="/Content/Site.css" />
+</head>
+<body>
+    <header>
+        <div class="header">
+            Blog Spot
+        <!--<nav>
+                <ul>
+                    <li><a href="ListTeachers.aspx">Teachers</a></li>
+                    <li><a href="ListClasses.aspx">Classes</a></li>
+                    <li><a href="ListStudents.aspx">Students</a></li>
+                </ul>
+            </nav> -->
+        </div>
+    </header>
+    <div class="body">
+        <form id="form1" runat="server">
+            <asp:ContentPlaceHolder ID="maincontent" runat="server">
+            </asp:ContentPlaceHolder>
+        </form>
+    </div>
+    <footer>
+        <div class="footer">
+                <p>&copy; <%: DateTime.Now.Year %> - Blog Spot</p>
+        </div>
+    </footer>
+</body>
+</html>

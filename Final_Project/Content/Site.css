@@ -1,0 +1,166 @@
+﻿/* Header */
+body {
+    box-sizing:border-box;
+    margin:0;
+}
+.header {
+    font-size: 40px;
+    background-color: #4b5264;
+    color: white;
+    padding: 15px;
+    margin: 0;
+    text-align: center;
+}
+
+/*Body*/
+
+.body-content {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+.title_text {
+    text-align: center;
+    color: #4b5264;
+}
+.search_form
+{
+    display:flex;
+
+}
+.search_div 
+{
+    padding-left: 100px;
+    width: 75%;
+}
+.search_bar {
+    width: 90%;
+    padding: 5px;
+    padding-left: 20px;
+}
+.search_btn {
+    background-color: #4b5264;
+    color:white;
+    padding:5px;
+}
+.listitem {
+    padding: 10px;
+    margin-left: 100px;
+    margin-top: 20px;
+}
+.listitem {
+    display: flex;
+}
+.listitem div {
+        padding: 10px;
+    }
+
+.ar_date span{
+    display:block;
+    padding-left:20px;
+}
+.ar_date {
+    width:10%;
+    background-color:orange;
+}
+.ar_result {
+    width:100%;
+}
+.ar_list{
+    width:100%;
+}
+.ar_title {
+    width: 60%;
+    background-color: lightgrey;
+    font-size:20px;
+}
+.btn_div input {
+    margin-left: 10px;
+    padding: 10px;
+    border:none;
+    margin-left:-50px;
+
+}
+.btn_div1 input {
+    margin-left: 10px;
+    padding: 10px;
+    border: none;
+    margin-left: 20px;
+}
+
+.date_month {
+    font-size: 20px;
+    padding-left: 35px;
+}
+
+.date_int {
+    font-size: 30px;
+}
+.action_title {
+    font-size: 30px;
+    padding-left: 65px;
+    color: #4b5264;
+}
+.ar_name_div {
+    padding-bottom: 20px;
+    font-size: 20px;
+    color: #4b5264;
+    padding-left:65px;
+
+}
+.ar_date_div {
+    padding-bottom: 20px;
+    font-size: 20px;
+    color: #4b5264;
+    padding-left: 65px;
+}
+.ar_content_div {
+    font-size: 20px;
+    color: #4b5264;
+    padding-left: 65px;
+}
+.add_input
+{
+    padding-left:20px;
+
+}
+.add_btn {
+    margin-top: 20px;
+    padding-left: 65px;
+    background-color: #4b5264;
+    color: white;
+    padding: 5px;
+}
+.u_field {
+    padding-bottom: 20px;
+    font-size: 20px;
+    color: #4b5264;
+    padding-left: 65px;
+}
+.v_btn {
+    margin-top: 20px;
+    background-color: #4b5264;
+    color: white;
+    padding: 5px;
+}
+.del_btn
+{
+    margin-left:65px;
+}
+/* Footer */
+.footer {
+    background-color: #4b5264;
+    color: white;
+    text-align: center;
+    font-size: 20px;
+}
+
+/* Responsive: Portrait tablets and up */
+@media screen and (min-width: 768px) {
+    .jumbotron {
+        margin-top: 20px;
+    }
+
+    .body-content {
+        padding: 0;
+    }
+}
