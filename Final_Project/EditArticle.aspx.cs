@@ -14,6 +14,7 @@ namespace Final_Project
         {
             if (!Page.IsPostBack)
             {
+                //to show the current data available 
                 ShowArticleDetails(db);
             }
         }
@@ -27,10 +28,12 @@ namespace Final_Project
             if (valid)
             {
                 Articles new_article = new Articles();
+                // setting the updated data
                 new_article.SetArticleTitle(u_arTitle.Text);
                 new_article.SetArticleContent(u_arContent.Text);
                 try
                 {
+                    //adding data to database
                     db.UpdateArticle(Int32.Parse(articleid), new_article);
                     Response.Redirect("ListArticles.aspx?articleid=" + articleid);
                 }
@@ -57,7 +60,7 @@ namespace Final_Project
             {
                 Articles ar_record = db.FindArticle(Int32.Parse(articleid));
 
-
+                // getting data from databse
                 u_arTitle.Text = ar_record.GetArticleTitle();
                 u_arDate.Text = ar_record.GetArticleDate().ToString("yyyy-M-dd");
                 u_arContent.Text = ar_record.GetArticleContent();

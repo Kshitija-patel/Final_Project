@@ -1,6 +1,6 @@
 ﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site.master.cs" Inherits="Final_Project.SiteMaster" %>
-
-<<!DOCTYPE html>
+<!--reference: Class examples (https://github.com/christinebittle/HTTP_5101_FALL2019)-->
+<!DOCTYPE html>
 
 <html>
 <head runat="server">

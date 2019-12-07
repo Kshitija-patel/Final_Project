@@ -7,6 +7,7 @@ using System.Diagnostics;
 
 namespace Final_Project
 {
+    //reference: Class examples (https://github.com/christinebittle/HTTP_5101_FALL2019)
     public class ARTICLEDB
     {
         private static string User { get { return "root"; } }
@@ -27,10 +28,14 @@ namespace Final_Project
                     + "; password = " + Password;
             }
         }
+
+        //a dictionary is like a list but with Key:Value pairs
+
         public List<Dictionary<String, String>> List_Query(string query)
         {
+            //initialize connection
             MySqlConnection Connect = new MySqlConnection(ConnectionString);
-
+         
             List<Dictionary<String, String>> ResultSet = new List<Dictionary<String, String>>();
 
             try
@@ -39,9 +44,9 @@ namespace Final_Project
                 Debug.WriteLine("Attempting to execute query " + query);
                 
                 Connect.Open();
-                
+                //query is given to the connection
                 MySqlCommand cmd = new MySqlCommand(query, Connect);
-                
+                // getting resultset
                 MySqlDataReader resultset = cmd.ExecuteReader();
 
 
@@ -74,11 +79,13 @@ namespace Final_Project
 
             return ResultSet;
         }
+        //function to add new arcticles
         public void AddArticle(Articles new_article)
         {
             string query;
            
             {
+                //query to insert new article into database 
                 query = "INSERT INTO articles(articletitle,articledate,articlecontent) VALUES ('{0}','{1}','{2}')";
                 query = String.Format(query, new_article.GetArticleTitle(), new_article.GetArticleDate().ToString("yyyy-MM-dd H:mm:ss"), new_article.GetArticleContent());
             }
@@ -99,6 +106,7 @@ namespace Final_Project
 
             Connect.Close();
         }
+        //function to search a particular article
         public Articles FindArticle(int aid)
         {
             MySqlConnection Connect = new MySqlConnection(ConnectionString);
@@ -107,9 +115,10 @@ namespace Final_Project
 
             try
             {
+                //query to search the article using article id
                 string query = "select * from articles where articleid = " + aid;
                 Debug.WriteLine("Connection Initialized...");
-                Debug.WriteLine(query);
+               
                 Connect.Open();
                 MySqlCommand cmd = new MySqlCommand(query, Connect);
                 MySqlDataReader resultset = cmd.ExecuteReader();
@@ -125,7 +134,7 @@ namespace Final_Project
                         string key = resultset.GetName(i);
                         string value = resultset.GetString(i);
                         Debug.WriteLine("Attempting to transfer " + key + " data of " + value);
-                        
+                        //setting value in article object  
                         switch (key)
                         {
                             case "articletitle":
@@ -162,7 +171,7 @@ namespace Final_Project
         }
         public void DeleteArticle(int articleid)
         {
-            
+            // query to delete a specific article
             string removearticle = "delete from articles where articleid = {0}";
             removearticle = String.Format(removearticle, articleid);
             Debug.WriteLine(removearticle);
@@ -187,6 +196,7 @@ namespace Final_Project
         }
         public void UpdateArticle(int articleid, Articles new_article)
         {
+            // query to update a article
             
             string query = "update articles set articletitle='{0}', articlecontent='{1}' where articleid={2}";
             query = String.Format(query, new_article.GetArticleTitle(), new_article.GetArticleContent(), articleid);

@@ -14,20 +14,22 @@ namespace Final_Project
         {
             Debug.WriteLine("In add page");
         }
-
+        //function to insert new article
         protected void InsertArticle(object sender, EventArgs e)
         {
             Debug.WriteLine("In add");
             ARTICLEDB db = new ARTICLEDB();
   
             Articles new_article = new Articles();
+            //setting values to database
             new_article.SetArticleTitle(articleTitle.Text);
             new_article.SetArticleDate(DateTime.Now);
             new_article.SetArticleContent(articleContent.Text);
             Debug.WriteLine(new_article.GetArticleTitle());
+
             db.AddArticle(new_article);
 
-
+            // redirecting to list page after completing adding process
             Response.Redirect("ListArticles.aspx");
         }
     }

@@ -22,11 +22,12 @@ namespace Final_Project
                 searchbar = search_text.Text;
             }
 
-
+            // query to list all articles
             string query = "select * from articles";
 
             if (searchbar != "")
             {
+                // query to search a particular article using article title
                 query += " where articletitle like '%" + searchbar + "%' ";
             }
 
@@ -53,6 +54,7 @@ namespace Final_Project
                 ar_result.InnerHtml += "</div>";
             }
         }
+        // function called when add article button is clicked
         protected void AddArticle(object sender, EventArgs e)
         {
             Response.Redirect("AddArticles.aspx");

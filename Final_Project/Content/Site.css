@@ -11,9 +11,10 @@ body {
     margin: 0;
     text-align: center;
 }
-
+.content_para {
+    width:80%;
+}
 /*Body*/
-
 .body-content {
     padding-left: 15px;
     padding-right: 15px;
@@ -90,6 +91,7 @@ body {
 .date_month {
     font-size: 20px;
     padding-left: 35px;
+
 }
 
 .date_int {
@@ -97,54 +99,56 @@ body {
 }
 .action_title {
     font-size: 30px;
-    padding-left: 65px;
     color: #4b5264;
 }
 .ar_name_div {
     padding-bottom: 20px;
     font-size: 20px;
     color: #4b5264;
-    padding-left:65px;
-
 }
 .ar_date_div {
     padding-bottom: 20px;
     font-size: 20px;
     color: #4b5264;
-    padding-left: 65px;
 }
 .ar_content_div {
     font-size: 20px;
     color: #4b5264;
-    padding-left: 65px;
 }
-.add_input
-{
-    padding-left:20px;
-
-}
-.add_btn {
-    margin-top: 20px;
-    padding-left: 65px;
-    background-color: #4b5264;
-    color: white;
-    padding: 5px;
-}
-.u_field {
-    padding-bottom: 20px;
-    font-size: 20px;
-    color: #4b5264;
-    padding-left: 65px;
-}
+.ar_name_div label, .ar_date_div label, .ar_content_div label {
+        font-weight: 600;
+    }
+    .add_update_btn {
+        margin-top: 20px;
+        background-color: #4b5264;
+        color: white;
+        padding: 5px;
+        border: none;
+    }
 .v_btn {
-    margin-top: 20px;
+    margin: 20px 150px 0 0px;
     background-color: #4b5264;
     color: white;
     padding: 5px;
+    border:none;
 }
 .del_btn
 {
-    margin-left:65px;
+    border:none;
+}
+.u_articleTitle, .u_articleDate, .u_articleContent label {
+    padding-bottom: 20px;
+    font-size: 20px;
+    font-weight: 600;
+    color: #4b5264;
+}
+.u_field {
+    padding: 5px;
+    margin-left: 5px
+}
+.add_ar, .update_ar, .article_details {
+    width: 80%;
+    margin: auto;
 }
 /* Footer */
 .footer {

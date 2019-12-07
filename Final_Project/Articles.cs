@@ -7,11 +7,15 @@ namespace Final_Project
 {
     public class Articles
     {
+        // private variables
         private string ArticleTitle;
         private DateTime ArticleDate = DateTime.Now;
         private string ArticleContent;
 
 
+
+        // private variables are encapsulated in public methods
+        // method to get values 
         public string GetArticleTitle()
         {
             return ArticleTitle;
@@ -26,7 +30,7 @@ namespace Final_Project
         }
 
       
-
+        // methods to set values
         public void SetArticleTitle(string value)
         {
             ArticleTitle = value;
