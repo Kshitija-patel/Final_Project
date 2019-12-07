@@ -1,7 +1,7 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="EditArticle.aspx.cs" Inherits="Final_Project.EditArticle" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="maincontent" runat="server">
     <div class="update_ar">
-    <h2 class="action_title">Update Article <span id="student_title" runat="server"></span></h2>
+    <h2 class="action_title">Update Article <span id="ar_title" runat="server"></span></h2>
         
         <div class="u_articleTitle">
             <label>Article Title:</label>

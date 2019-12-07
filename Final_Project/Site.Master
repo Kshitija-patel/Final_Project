@@ -11,13 +11,6 @@
     <header>
         <div class="header">
             Blog Spot
-        <!--<nav>
-                <ul>
-                    <li><a href="ListTeachers.aspx">Teachers</a></li>
-                    <li><a href="ListClasses.aspx">Classes</a></li>
-                    <li><a href="ListStudents.aspx">Students</a></li>
-                </ul>
-            </nav> -->
         </div>
     </header>
     <div class="body">

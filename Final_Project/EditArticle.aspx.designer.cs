@@ -13,13 +13,13 @@ namespace Final_Project {
     public partial class EditArticle {
         
         /// <summary>
-        /// student_title control.
+        /// ar_title control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlGenericControl student_title;
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl ar_title;
         
         /// <summary>
         /// u_arTitle control.
